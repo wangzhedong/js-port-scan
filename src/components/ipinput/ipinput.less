@@ -1,0 +1,72 @@
+@input:ip-inpt;
+.ipAdress {
+    display: flex;
+    align-items: center;
+    border: 1px solid #0190fe;
+    width: 148px;
+    margin-right: 10px;
+    li {
+        position: relative;
+        height: 23px;
+        margin: 0;
+        list-style-type: none;
+        div {
+            position: absolute;
+            bottom: 2px;
+            right: 0;
+            border-radius: 50%;
+            background: #0190fe;
+            width: 2px;
+            height: 2px;
+          }
+      }
+    ul[class="ipAdress"] input[type="text"] {
+        border: none;
+        width: 100%;
+        height: 23px;
+        text-align: center;
+        background: transparent;
+        /* color: #efefef; */
+      }
+
+  }
+
+
+.ipAdress {
+    display: flex;
+    align-items: center;
+    border: 1px solid #0190fe;
+    width: 148px;
+    margin-right: 10px;
+  }
+  .ipAdress li {
+    position: relative;
+    height: 23px;
+    margin: 0;
+    list-style-type: none;
+  }
+  ul[class="ipAdress"] input[type="text"] {
+    border: none;
+    width: 100%;
+    height: 23px;
+    text-align: center;
+    background: transparent;
+    /* color: #efefef; */
+  }
+  .ipAdress li div {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    border-radius: 50%;
+    background: #0190fe;
+    width: 2px;
+    height: 2px;
+  }
+  /*只需要3个div*/
+  .ipAdress li:last-child div {
+    display: none;
+  }
+  /*取消掉默认的input focus状态*/
+  .ipAdress input:focus {
+    outline: none;
+  }
