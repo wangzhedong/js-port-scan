@@ -16,6 +16,9 @@
 <script>
 export default {
   name: "ip-input",
+  props:{
+    ipInputKey:String
+  },
   data() {
     return {
       ipAdress: [
@@ -49,7 +52,7 @@ export default {
             ip += (v+".") 
           }
         }
-        this.$emit("getIP",ip);
+        this.$emit("getIP",ip,this.ipInputKey);
       },
       deep: true
     }
