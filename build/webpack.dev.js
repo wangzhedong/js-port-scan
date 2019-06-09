@@ -13,6 +13,13 @@ module.exports = merge(common, {
                 { from: /.*/, to: path.posix.join('/', 'index.html') },
             ],
         },
+        proxy: {
+            "/api": {
+              target: 'http://localhost:9090',
+              pathRewrite: {'^/api' : ''},
+              changeOrigin: true
+            }
+        },
     },
     output: {
         filename: 'js/[name].[hash].js',

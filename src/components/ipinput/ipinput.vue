@@ -116,7 +116,6 @@ export default {
 .ipAdress {
   display: flex;
   align-items: center;
-  /* border: 1px solid #0190fe; */
   border-radius: 4px;
   border: 1px solid #DCDFE6;
   width: 148px;
