@@ -2,7 +2,7 @@
   <div id="app">
     <el-row>
       <el-col :span="2" :offset="4">
-        <div style="text-align:center;padding-top: 8px;">选择ip类型：</div>
+        <div class="textCenter">选择ip类型：</div>
       </el-col>
       <el-col :span="4">
         <el-select v-model="ipType" @change="changeIpType" placeholder="请选择ip类型">
@@ -19,7 +19,7 @@
       </el-col>
 
       <el-col :span="2" :offset="2">
-        <div style="text-align:center;padding-top: 8px;">选择端口类型：</div>
+        <div class="textCenter">选择端口类型：</div>
       </el-col>
       <el-col :span="4">
         <el-select v-model="portType" placeholder="请选择端口类型">
@@ -270,7 +270,8 @@ export default {
                 spinner: 'el-icon-loading',
                 background: 'rgba(0, 0, 0, 0.7)',
             });
-            axios.post('/api/port/scan/start', data)
+            let url = window.document.location.origin;
+            axios.post(url+'/port/scan/start', data)
             .then(res => {
               if(res.data.status == '1'){
                 let resdata = res.data.data;
@@ -297,11 +298,11 @@ export default {
 #app {
     margin-top: 50px;
 }
-.hidden {
-    visibility: hidden;
+
+.textCenter{
+  text-align:center;
+  padding-top: 8px;
 }
-.show {
-    visibility: visible;
-}
+
 </style>
 

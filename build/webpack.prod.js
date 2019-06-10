@@ -56,13 +56,6 @@ module.exports = merge(common, {
                     'css-loader',
                     'postcss-loader',
                     'sass-loader',
-                    {
-                        loader: 'sass-resources-loader',
-                        options: {
-                            sourceMap: true,
-                            //resources: ['./src/assets/styles/common.scss'],
-                        },
-                    },
                 ],
             },
             {
